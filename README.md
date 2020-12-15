@@ -1,2 +1,3 @@
 # dashboard-geofisika
-Dashboard web geophys.sci.unhas.ac.id
+
+Dashboard web www.geophys.sci.unhas.ac.id
