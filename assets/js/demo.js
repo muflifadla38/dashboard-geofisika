@@ -222,12 +222,21 @@ demo = {
             gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
             gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
 
+
+            let tahun = ['2013', '2014', '2015', '2016', '2017'];
+            let jumlahAktif = [57, 58, 48, 59, 58];
+            let priaAktif = [17, 15, 8, 11, 18];
+            let wanitaAktif = [];
+            for (let i = 0; i < jumlahAktif.length; i++) {
+                wanitaAktif[i] = jumlahAktif[i] - priaAktif[i];
+            }
+
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ["2013", "2014", "2015", "2016", "2017"],
+                    labels: tahun,
                     datasets: [{
-                        label: "Data",
+                        label: "Jumlah",
                         borderColor: chartColor,
                         pointBorderColor: chartColor,
                         pointBackgroundColor: "#1e3d60",
@@ -240,7 +249,37 @@ demo = {
                         fill: true,
                         backgroundColor: gradientFill,
                         borderWidth: 2,
-                        data: [57, 58, 48, 59, 58]
+                        data: jumlahAktif
+                    }, {
+                        label: "Laki-laki",
+                        borderColor: chartColor,
+                        pointBorderColor: chartColor,
+                        pointBackgroundColor: "#3a76ba ",
+                        pointHoverBackgroundColor: "#3a76ba ",
+                        pointHoverBorderColor: chartColor,
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 7,
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 5,
+                        fill: true,
+                        backgroundColor: gradientFill,
+                        borderWidth: 2,
+                        data: priaAktif
+                    }, {
+                        label: "Perempuan",
+                        borderColor: chartColor,
+                        pointBorderColor: chartColor,
+                        pointBackgroundColor: "#2c598d",
+                        pointHoverBackgroundColor: "#2c598d",
+                        pointHoverBorderColor: chartColor,
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 7,
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 5,
+                        fill: true,
+                        backgroundColor: gradientFill,
+                        borderWidth: 2,
+                        data: wanitaAktif
                     }]
                 },
                 options: {
