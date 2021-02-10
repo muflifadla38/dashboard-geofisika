@@ -47,11 +47,19 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="active ">
-                        <a href="./statistik-mahasiswa.html">
+                    <li class="parent">
+                        <a href="#" onclick="toggle_menu('data-akademik'); return false">
                             <i class="now-ui-icons education_atom"></i>
-                            <p>Statistik Mahasiswa</p>
+                            <span class="none">Data Akademik
+                                <i id="arrow-icon" class="now-ui-icons pull-right align-bottom arrows-1_minimal-right"></i>
+                            </span>
                         </a>
+                        <ul class="children" id="data-akademik">
+                            <li class="child">
+                                <a href="./statistik-mahasiswa.html" class="ml-4">Statistik Mahasiswa</a>
+                            </li>
+                            <li class="child"><a href="./statistik-dosen.html" class="ml-4"><i class="mr-2"></i> Statistik Dosen</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="./map.html">

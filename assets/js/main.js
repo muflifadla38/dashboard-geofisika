@@ -1,13 +1,13 @@
 // Doughat Chart.Js
-if ($("#usersDoughnutChart").length) {
-    let usersDoughnutChart = $("#usersDoughnutChart")[0].getContext('2d');
+if ($('#usersDoughnutChart').length) {
+    let usersDoughnutChart = $('#usersDoughnutChart')[0].getContext('2d');
 
     let doughnutUsersChart = new Chart(usersDoughnutChart, {
         type: 'doughnut',
         data: {
-            labels: ["Dosen", "Staff", "Mahasiswa"],
+            labels: ['Dosen', 'Staff', 'Mahasiswa'],
             datasets: [{
-                label: "Users",
+                label: 'Users',
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -32,7 +32,7 @@ if ($("#usersDoughnutChart").length) {
     });
 }
 
-if ($("#barChartMorris").length) {
+if ($('#barChartMorris').length) {
     Morris.Bar({
         element: 'barChartMorris',
         data: [
@@ -50,12 +50,12 @@ if ($("#barChartMorris").length) {
     });
 }
 
-if ($("#doughnutChartMorris").length) {
+if ($('#doughnutChartMorris').length) {
     Morris.Donut({
         element: 'doughnutChartMorris',
         data: [
-            { label: "Laki-laki", value: 12 },
-            { label: "Wanita", value: 30 }
+            { label: 'Laki-laki', value: 12 },
+            { label: 'Wanita', value: 30 }
         ],
         colors: ['#D17905', '#3A5276', '#3DC9B0'],
         resize: true,
@@ -65,54 +65,54 @@ if ($("#doughnutChartMorris").length) {
 
 // Indonesia Vector Map with label data
 let provinsiData = {
-    "ID_ac": 0, //aceh
-    "ID_ba": 0, //bali
-    "ID_bb": 0, //bangka belitung
-    "ID_be": 0, //bengkulu
-    "ID_bt": 0, //banten
-    "ID_go": 0, //gorontalo
-    "ID_ja": 0, //jambi
-    "ID_jb": 0, //jabar
-    "ID_jl": 0, //jatim
-    "ID_jk": 0, //jakarta
-    "ID_jt": 3, //jateng
-    "ID_kb": 0, //kalbar
-    "ID_ki": 0, //kaltim
-    "ID_kr": 0, //kep. riau
-    "ID_ks": 0, //kalsel
-    "ID_kt": 0, //kalteng
-    "ID_ku": 0, //kalut
-    "ID_la": 0, //lampung
-    "ID_ma": 0, //maluku
-    "ID_mu": 0, //maluku utara
-    "ID_nb": 0, //NTB
-    "ID_nt": 0, //NTT
-    "ID_pa": 0, //papua
-    "ID_pb": 0, //papua barat
-    "ID_ri": 0, //riau
-    "ID_sa": 9, //sulut
-    "ID_sb": 0, //sumbar
-    "ID_sg": 5, //sulteng
-    "ID_sn": 164, //sulsel
-    "ID_sr": 1, //sulbar
-    "ID_ss": 0, //sumsel
-    "ID_st": 0, //sulteng
-    "ID_su": 0, //sumut
-    "ID_yo": 0, //yogyakarta
-    "tl": 0, //timor leste
-    "my_sb": 0, //sabah malaysia
-    "my_sr": 0, //serawak malaysia
-    "bn": 0 //brunei
+    'ID_ac': 0, //aceh
+    'ID_ba': 0, //bali
+    'ID_bb': 0, //bangka belitung
+    'ID_be': 0, //bengkulu
+    'ID_bt': 0, //banten
+    'ID_go': 0, //gorontalo
+    'ID_ja': 0, //jambi
+    'ID_jb': 0, //jabar
+    'ID_jl': 0, //jatim
+    'ID_jk': 0, //jakarta
+    'ID_jt': 3, //jateng
+    'ID_kb': 0, //kalbar
+    'ID_ki': 0, //kaltim
+    'ID_kr': 0, //kep. riau
+    'ID_ks': 0, //kalsel
+    'ID_kt': 0, //kalteng
+    'ID_ku': 0, //kalut
+    'ID_la': 0, //lampung
+    'ID_ma': 0, //maluku
+    'ID_mu': 0, //maluku utara
+    'ID_nb': 0, //NTB
+    'ID_nt': 0, //NTT
+    'ID_pa': 0, //papua
+    'ID_pb': 0, //papua barat
+    'ID_ri': 0, //riau
+    'ID_sa': 9, //sulut
+    'ID_sb': 0, //sumbar
+    'ID_sg': 5, //sulteng
+    'ID_sn': 164, //sulsel
+    'ID_sr': 1, //sulbar
+    'ID_ss': 0, //sumsel
+    'ID_st': 0, //sulteng
+    'ID_su': 0, //sumut
+    'ID_yo': 0, //yogyakarta
+    'tl': 0, //timor leste
+    'my_sb': 0, //sabah malaysia
+    'my_sr': 0, //serawak malaysia
+    'bn': 0 //brunei
 };
 
-if ($("#indonesiaMap").length) {
+if ($('#indonesiaMap').length) {
     $('#indonesiaMap').vectorMap({
         map: 'id_ID',
         scaleColors: ['#C8EEFF', '#0071A4'],
         normalizeFunction: 'polynomial',
         hoverOpacity: 0.7,
         hoverColor: false,
-        regionStyle: { initial: { fill: "#0D47A1" } },
+        regionStyle: { initial: { fill: '#0D47A1' } },
         markerStyle: {
             initial: {
                 fill: '#5c5c5c',
@@ -144,10 +144,50 @@ if (currentPage == 'login' || currentPage == 'login.php') {
     const container = document.getElementById('container');
 
     signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active");
+        container.classList.add('right-panel-active');
     });
 
     signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active");
+        container.classList.remove('right-panel-active');
     });
 }
+
+/*==== Sidebar toggle navigation show and hide =====*/
+function toggle_menu(ele) {
+    //close all ul with children class that are open except the one with the selected id
+    $('.children').not(document.getElementById(ele)).slideUp("Normal");
+    $('#' + ele).slideToggle('Normal');
+    localStorage.setItem('lastTab', ele);
+}
+
+function pageLoad() {
+    $.each($('.children'), function() {
+        let ele = localStorage.getItem('lastTab');
+        if ($(this).attr('id') == ele) {
+            $('#' + ele).slideToggle('Normal');
+        }
+        //$('.children').hide();
+    });
+}
+pageLoad();
+
+// Arrow icon and add active class
+$('#sidebar-wrapper ul li.parent').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+
+    let findIcon = $('.active').find('#arrow-icon').hasClass('toggle-icon');
+    let iconElement = $('.active #arrow-icon');
+    if (findIcon) {
+        iconElement.removeClass('toggle-icon');
+    } else
+    if (!findIcon) {
+        iconElement.addClass('toggle-icon');
+    }
+
+    let listParent = $('.active').siblings().not('.child');
+    if (listParent.hasClass('parent')) {
+        resetArrow = listParent.find('#arrow-icon');
+        resetArrow.removeClass('toggle-icon');
+    }
+});
+/*==== Sidebar toggle navigation show and hide =====*/
