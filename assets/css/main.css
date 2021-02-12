@@ -355,3 +355,10 @@ button:not(:disabled) {
 ul.children {
     padding-inline-start: 2em;
 }
+
+
+/**/
+
+.panel-header-xl {
+    height: 500px;
+}

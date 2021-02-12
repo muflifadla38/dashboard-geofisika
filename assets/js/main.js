@@ -1,7 +1,6 @@
 // Doughat Chart.Js
 if ($('#usersDoughnutChart').length) {
     let usersDoughnutChart = $('#usersDoughnutChart')[0].getContext('2d');
-
     let doughnutUsersChart = new Chart(usersDoughnutChart, {
         type: 'doughnut',
         data: {
@@ -191,3 +190,82 @@ $('#sidebar-wrapper ul li.parent').click(function() {
     }
 });
 /*==== Sidebar toggle navigation show and hide =====*/
+
+
+/*==== Statistik Dosen Page =====*/
+// Big Dashboard Dosen
+if ($('#dosenBarChartMorris').length) {
+    Morris.Bar({
+        element: 'dosenBarChartMorris',
+        data: [
+            { y: 'Guru Besar', a: Math.floor(Math.random() * 50) },
+            { y: 'Lektor Kepala', a: Math.floor(Math.random() * 50) },
+            { y: 'Asisten Ahli', a: Math.floor(Math.random() * 50) },
+            { y: 'Belum Menjabat', a: Math.floor(Math.random() * 50) }
+        ],
+        xkey: 'y',
+        ykeys: ['a'],
+        labels: ['Jumlah: '],
+        barColors: ['#23649E'],
+        resize: true
+    });
+}
+
+// Golongan Dosen
+if ($('#golonganDosenBarChart').length) {
+    Morris.Bar({
+        element: 'golonganDosenBarChart',
+        data: [
+            { y: 'III/a', a: Math.floor(Math.random() * 50) },
+            { y: 'III/b', a: Math.floor(Math.random() * 50) },
+            { y: 'III/c', a: Math.floor(Math.random() * 50) },
+            { y: 'III/d', a: Math.floor(Math.random() * 50) },
+            { y: 'IV/a', a: Math.floor(Math.random() * 50) },
+            { y: 'IV/b', a: Math.floor(Math.random() * 50) },
+            { y: 'IV/c', a: Math.floor(Math.random() * 50) },
+            { y: 'IV/d', a: Math.floor(Math.random() * 50) },
+            { y: 'IV/e', a: Math.floor(Math.random() * 50) }
+        ],
+        xkey: 'y',
+        ykeys: ['a'],
+        labels: ['Jumlah: '],
+        barColors: ['#23649E'],
+        resize: true
+    });
+}
+
+// Pendidikan Dosen
+if ($('#pendidikanDosenDonut').length) {
+    Morris.Donut({
+        element: 'pendidikanDosenDonut',
+        data: [
+            { label: 'Professor', value: Math.floor(Math.random() * 50) },
+            { label: 'Doktor', value: Math.floor(Math.random() * 50) },
+            { label: 'Magister', value: Math.floor(Math.random() * 50) }
+        ],
+        colors: ['#D17905', '#3A5276', '#3DC9B0'],
+        resize: true
+    });
+}
+
+//Usia Dosen
+if ($('#usiaDosenBarChart').length) {
+    Morris.Bar({
+        element: 'usiaDosenBarChart',
+        data: [
+            { y: '< 35', a: Math.floor(Math.random() * 50) },
+            { y: '35 - 40', a: Math.floor(Math.random() * 50) },
+            { y: '41 - 45', a: Math.floor(Math.random() * 50) },
+            { y: '46 - 50', a: Math.floor(Math.random() * 50) },
+            { y: '51 - 55', a: Math.floor(Math.random() * 50) },
+            { y: '56 - 60', a: Math.floor(Math.random() * 50) },
+            { y: '> 60', a: Math.floor(Math.random() * 50) }
+        ],
+        xkey: 'y',
+        ykeys: ['a'],
+        labels: ['Jumlah: '],
+        barColors: ['#23649E'],
+        resize: true
+    });
+}
+/*==== Statistik Dosen Page =====*/

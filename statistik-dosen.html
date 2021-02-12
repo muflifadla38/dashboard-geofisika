@@ -132,38 +132,35 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-            <div class="panel-header panel-header-lg">
-                <h5 class="text-white" style="padding-left:1.5em">Jumlah Mahasiswa Aktif</h5>
-                <canvas id="bigDashboardChart"></canvas>
-                <!--<div id="areaChartMorris" height="150px"></div>-->
+            <div class="panel-header panel-header-xl">
+                <h5 class="text-white" style="padding-left:1.5em">Komposisi Pendidik Berdasarkan Golongan</h5>
+                <div id="golonganDosenBarChart"></div>
             </div>
             <div class="content">
                 <div class="row">
                     <div class="col-sm-6">
-                        <!--Bar Chart-->
                         <div class="card card-chart">
                             <div class="card-header">
-                                <h6 class="card-category">Mahasiswa</h6>
-                                <h5 class="card-title">Jumlah Mahasiswa Peminat dan Diterima</h5>
+                                <h6 class="card-category">Pendidik</h6>
+                                <h5 class="card-title">Komposisi Pendidik Berdasarkan Jabatan</h5>
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <div id="barChartMorris" height="150px"></div>
+                                    <div id="dosenBarChartMorris" height="150px"></div>
                                 </div>
                             </div>
                         </div>
-                        <!--/Bar Chart-->
                     </div>
                     <div class="col-sm-6">
                         <!--Doughnut Chart-->
                         <div class="card card-chart">
                             <div class="card-header">
-                                <h6 class="card-category">Mahasiswa</h6>
-                                <h5 class="card-title">Jumlah Mahasiswa per Jenis Kelamin</h5>
+                                <h6 class="card-category">Pendidik</h6>
+                                <h5 class="card-title">Pendidikan Terakhir Pendidik</h5>
                             </div>
                             <div class="card-body">
                                 <div>
-                                    <div id="doughnutChartMorris" height="150px"></div>
+                                    <div id="pendidikanDosenDonut" height="150px"></div>
                                 </div>
                             </div>
                         </div>
@@ -173,12 +170,12 @@
                         <!--Vector Map-->
                         <div class="card card-chart">
                             <div class="card-header">
-                                <h6 class="card-category">Mahasiswa</h6>
-                                <h5 class="card-title">Jumlah Mahasiswa per Daerah Asal</h5>
+                                <h6 class="card-category">Pendidik</h6>
+                                <h5 class="card-title">Komposisi Pendidik Berdasarkan Usia</h5>
                             </div>
                             <div class="card-body">
                                 <div class="mt-1 mb-3 p-3 button-container">
-                                    <div id="indonesiaMap" style="width: 100%; height: 350px"></div>
+                                    <div id="usiaDosenBarChart" style="width: 100%; height: 350px"></div>
                                 </div>
                             </div>
                         </div>
