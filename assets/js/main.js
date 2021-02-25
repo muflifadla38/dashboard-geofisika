@@ -271,24 +271,27 @@ if ($('#usiaDosenBarChart').length) {
 /*==== Statistik Dosen Page =====*/
 
 /*==== Peta Depatemen Page =====*/
-let departemenMap = L.map('departemen-map').setView([-5.132032, 119.486547], 20);
+if ($('#departemen-map').lenght) {
+    let departemenMap = L.map('departemen-map').setView([-5.132032, 119.486547], 20);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 25,
-    id: 'mapbox/streets-v11', //mapbox/satellite-v9
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiZ2VvZmlzaWthMzgiLCJhIjoiY2tsbDJ6NnNjMDdkMzJ1bnpqMzIxOXZseiJ9.k7XxJ1ma-Bgjcyj_gYFx-Q'
-}).addTo(departemenMap);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 25,
+        id: 'mapbox/streets-v11', //mapbox/satellite-v9
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiZ2VvZmlzaWthMzgiLCJhIjoiY2tsbDJ6NnNjMDdkMzJ1bnpqMzIxOXZseiJ9.k7XxJ1ma-Bgjcyj_gYFx-Q'
+    }).addTo(departemenMap);
 
-let markerDepartemen = L.marker([-5.132032, 119.486547]).addTo(departemenMap);
-markerDepartemen.bindPopup("<b>Departemen Geofisika</b><br>").openPopup();
+    let markerDepartemen = L.marker([-5.132032, 119.486547]).addTo(departemenMap);
+    markerDepartemen.bindPopup("<b>Departemen Geofisika</b><br>").openPopup();
 
-// Check LatLong
-/*
-function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
+    // Check LatLong
+    /*
+    function onMapClick(e) {
+        alert("You clicked the map at " + e.latlng);
+    }
+
+    departemenMap.on('click', onMapClick);*/
 }
-
-departemenMap.on('click', onMapClick);*/
+/*==== Peta Depatemen Page =====*/
