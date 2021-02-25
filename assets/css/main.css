@@ -362,3 +362,15 @@ ul.children {
 .panel-header-xl {
     height: 500px;
 }
+
+
+/*Peta Departemen*/
+
+#departemen-map {
+    height: 580px;
+    border-radius: 4px;
+}
+
+.margin-big-map {
+    margin: 0 15px;
+}
