@@ -165,7 +165,7 @@ function pageLoad() {
         if ($(this).attr('id') == ele) {
             $('#' + ele).slideToggle('Normal');
         }
-        //$('.children').hide();
+        $('.children').hide();
     });
 }
 pageLoad();
@@ -283,7 +283,19 @@ if ($('#departemen-map').length) {
         accessToken: 'pk.eyJ1IjoiZ2VvZmlzaWthMzgiLCJhIjoiY2tsbDJ6NnNjMDdkMzJ1bnpqMzIxOXZseiJ9.k7XxJ1ma-Bgjcyj_gYFx-Q'
     }).addTo(departemenMap);
 
-    let markerDepartemen = L.marker([-5.132032, 119.486547]).addTo(departemenMap);
+    let redIcon = L.icon({
+        iconUrl: '/assets/img/map/marker-96.png',
+        shadowUrl: '/assets/img/map/marker-shadow.png',
+
+        iconSize: [48, 48], // size of the icon
+        shadowSize: [50, 64], // size of the shadow
+        iconAnchor: [13, 47], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62], // the same for the shadow
+        popupAnchor: [-3, -50] // point from which the popup should open relative to the iconAnchor
+    });
+
+
+    let markerDepartemen = L.marker([-5.132031, 119.486531], { icon: redIcon }).addTo(departemenMap);
     markerDepartemen.bindPopup("<b>Departemen Geofisika</b><br>").openPopup();
 
     // Check LatLong
@@ -294,4 +306,17 @@ if ($('#departemen-map').length) {
 
     departemenMap.on('click', onMapClick);*/
 }
+
+// Lazy load with blurred image
+$(function() {
+    $(window).on('load', function() {
+        $('img').each(function() {
+            let $this = $(this),
+                src = $(this).data('src');
+            $this.attr('src', src);
+            console.log(src);
+        });
+    });
+});
+
 /*==== Peta Depatemen Page =====*/

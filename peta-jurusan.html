@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="assets/css/vector-map/jquery-jvectormap-2.0.5.css">
     <!--Leaflet Css-->
     <link rel="stylesheet" href="assets/css/leaflet.css">
+    <!--Lazy Load Css-->
+    <link rel="stylesheet" href="assets/css/progressive-image.css">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -34,9 +36,6 @@
 <body>
     <div class="wrapper ">
         <div class="sidebar" data-color="red">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
             <div class="logo">
                 <a href="./index.html" class="simple-text logo-normal visible-on-sidebar-regular">Dashboard Geofisika</a>
                 <a href="#" class="simple-text logo-mini pull-right" data-toggle=sidebar-colapse><i class="now-ui-icons text_align-left text-white"></i></a>
@@ -61,6 +60,34 @@
                                 <a href="./statistik-mahasiswa.html" class="ml-4">Statistik Mahasiswa</a>
                             </li>
                             <li class="child"><a href="./statistik-dosen.html" class="ml-4"><i class="mr-2"></i> Statistik Dosen</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent">
+                        <a href="#" onclick="toggle_menu('data-kemahasiswaan'); return false">
+                            <i class="now-ui-icons education_hat"></i>
+                            <span class="none">Kemahasiswaan
+                                <i id="arrow-icon" class="now-ui-icons pull-right align-bottom arrows-1_minimal-right"></i>
+                            </span>
+                        </a>
+                        <ul class="children" id="data-kemahasiswaan">
+                            <li class="child"><a href="https://www.instagram.com/hmgf.unhas/" class="ml-4">HMGF</a></li>
+                            <li class="child"><a href="https://www.instagram.com/hmgindonesia/" class="ml-4"><i class="mr-2"></i>HMGI</a></li>
+                            <li class="child"><a href="https://www.hagi.or.id" class="ml-4">HAGI</a></li>
+                            <li class="child"><a href="#" class="ml-4">SPE</a></li>
+                            <li class="child"><a href="#" class="ml-4">SEG</a></li>
+                            <li class="child"><a href="https://mapin.or.id/" class="ml-4">MAPIN</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent">
+                        <a href="#" onclick="toggle_menu('akses-cepat'); return false">
+                            <i class="now-ui-icons objects_spaceship"></i>
+                            <span class="none">Akses Cepat
+                                <i id="arrow-icon" class="now-ui-icons pull-right align-bottom arrows-1_minimal-right"></i>
+                            </span>
+                        </a>
+                        <ul class="children" id="akses-cepat">
+                            <li class="child"><a href="https://sso.unhas.ac.id/" class="ml-4">Single Sign On</a></li>
+                            <li class="child"><a href="https://neosia.unhas.ac.id/" class="ml-4"><i class="mr-2"></i>Portal Akademik</a></li>
                         </ul>
                     </li>
                     <li>
@@ -139,11 +166,10 @@
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
+            <!-- End Navbar-->
             <div class="panel-header" style="height: 750px">
                 <h5 class="text-white" style="padding-left:1.5em">Peta Lokasi</h5>
                 <div id="departemen-map" class="margin-big-map"></div>
-                <!--<div id="areaChartMorris" height="150px"></div>-->
             </div>
             <div class="content">
                 <div class="row">
@@ -155,7 +181,11 @@
                             </div>
                             <div class="card-body">
                                 <div class="mt-1 mb-3 p-3 button-container">
-                                    <div id="" style="width: 100%"><img src="/assets/img/map/evacuation map.png" alt="Emergency Evacuation Map"></div>
+                                    <div id="" style="width: 100%">
+                                        <a href="/assets/img/map/evacuation-map.png" class="progressive replace">
+                                            <img src="/assets/img/map/evacuation-map-20.png" class="preview" alt="Emergency Evacuation Map" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,6 +229,8 @@
     <script src="assets/js/plugins/morris.js"></script>
     <!--Leaflet.JS-->
     <script src="assets/js/plugins/leaflet.js"></script>
+    <!--Lazy Load.JS-->
+    <script src="assets/js/plugins/progressive-image.js"></script>
     <!--  Notifications Plugin    -->
     <script src="assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
