@@ -320,3 +320,15 @@ $(function() {
 });
 
 /*==== Peta Depatemen Page =====*/
+
+/*==== Pencapaian Mahasiswa Page =====*/
+if ($('#prestasiMahasiswa').length) {
+    $(document).ready(function() {
+        $('#prestasiMahasiswa').DataTable({
+            "columnDefs": [
+                { "className": "text-center", "targets": [1, 2, 3] }
+            ]
+        });
+    });
+}
+/*==== Pencapaian Mahasiswa Page =====*/

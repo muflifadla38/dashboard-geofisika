@@ -374,3 +374,27 @@ ul.children {
 .margin-big-map {
     margin: 0 15px;
 }
+
+
+/*prestasi Mahasiswa*/
+
+.pagination .page-item.active a.page-link {
+    background-color: #f96332;
+    border-color: transparent;
+}
+
+.pagination a.page-link {
+    color: #f96332
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #111;
+}
+
+table.dataTable thead th:before,
+table.dataTable thead th:after {
+    bottom: inherit!important;
+    display: inline-block!important;
+}

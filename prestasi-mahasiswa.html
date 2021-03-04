@@ -19,14 +19,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
 
-    <!--Morris Css-->
-    <link rel="stylesheet" href="assets/css/morris.css">
-    <!--Jvector Map Css-->
-    <link rel="stylesheet" href="assets/css/vector-map/jquery-jvectormap-2.0.5.css">
-    <!--Leaflet Css-->
-    <link rel="stylesheet" href="assets/css/leaflet.css">
-    <!--Lazy Load Css-->
-    <link rel="stylesheet" href="assets/css/progressive-image.css">
+    <!--Datatables Css-->
+    <link rel="stylesheet" href="assets/css/dataTables/dataTables.bootstrap4.min.css">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -179,25 +173,181 @@
                 </div>
             </nav>
             <!-- End Navbar-->
-            <div class="panel-header" style="height: 750px">
-                <h5 class="text-white" style="padding-left:1.5em">Peta Lokasi</h5>
-                <div id="departemen-map" class="margin-big-map"></div>
-            </div>
+            <div class="panel-header panel-header-sm"></div>
             <div class="content">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card card-chart">
+                    <div class="col-md-12">
+                        <div class="card">
                             <div class="card-header">
-                                <h6 class="card-category">Peta</h6>
-                                <h5 class="card-title">Peta Jalur Evakuasi</h5>
+                                <h4 class="card-title">Pencapaian Mahasiswa</h4>
                             </div>
                             <div class="card-body">
-                                <div class="mt-1 mb-3 p-3 button-container">
-                                    <div id="" style="width: 100%">
-                                        <a href="/assets/img/map/evacuation-map.png" class="progressive replace">
-                                            <img src="/assets/img/map/evacuation-map-20.png" class="preview" alt="Emergency Evacuation Map" />
-                                        </a>
-                                    </div>
+                                <div class="table-responsive">
+                                    <table id="prestasiMahasiswa" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">Nama dan Waktu penyelenggaraan</th>
+                                                <th colspan="3" rowspan="1" class="text-center">Tingkat</th>
+                                                <th rowspan="2">Prestasi</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Lokal</th>
+                                                <th>Nasional</th>
+                                                <th>Internasional</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ASEAN Youth University (2014), UUT Malysia, a.n.Jamaluddin (H22112011)</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td>Peserta (Melalui seleksi)</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>&check;</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Nama dan Waktu penyelenggaraan</th>
+                                                <th>Lokal</th>
+                                                <th>Nasional</th>
+                                                <th>Internasional</th>
+                                                <th>Prestasi</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -231,18 +381,6 @@
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
     <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--Maps-->
-    <script src="assets/js/plugins/vector-map/jquery-jvectormap-2.0.5.min.js"></script>
-    <script src="assets/js/plugins/vector-map/jquery-jvectormap.id.js"></script>
-    <!-- Chart JS -->
-    <script src="assets/js/plugins/chartjs.min.js"></script>
-    <!--Morris.JS-->
-    <script src="assets/js/plugins/raphael.min.js"></script>
-    <script src="assets/js/plugins/morris.js"></script>
-    <!--Leaflet.JS-->
-    <script src="assets/js/plugins/leaflet.js"></script>
-    <!--Lazy Load.JS-->
-    <script src="assets/js/plugins/progressive-image.js"></script>
     <!--  Notifications Plugin    -->
     <script src="assets/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
@@ -250,13 +388,9 @@
     <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
     <script src="assets/js/demo.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Javascript method's body can be found in assets/js/demos.js
-            demo.initDashboardPageCharts();
-
-        });
-    </script>
+    <!-- Datatables JS -->
+    <script src="assets/js/plugins/dataTables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
 </body>
 
 </html>
