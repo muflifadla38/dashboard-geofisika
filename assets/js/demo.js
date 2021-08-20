@@ -1,11 +1,11 @@
 demo = {
     initPickColor: function() {
         $('.pick-class-label').click(function() {
-            var new_class = $(this).attr('new-class');
-            var old_class = $('#display-buttons').attr('data-class');
-            var display_div = $('#display-buttons');
+            let new_class = $(this).attr('new-class');
+            let old_class = $('#display-buttons').attr('data-class');
+            let display_div = $('#display-buttons');
             if (display_div.length) {
-                var display_buttons = display_div.find('.btn');
+                let display_buttons = display_div.find('.btn');
                 display_buttons.removeClass(old_class);
                 display_buttons.addClass(new_class);
                 display_div.attr('data-class', new_class);
@@ -107,7 +107,6 @@ demo = {
     },
 
     initDashboardPageCharts: function() {
-
         chartColor = "#FFFFFF";
 
         // General configuration for the charts with Line gradientStroke
@@ -212,13 +211,13 @@ demo = {
         };
 
         if ($("#bigDashboardChart").length) {
-            var ctx = document.getElementById('bigDashboardChart').getContext("2d");
+            let ctx = document.getElementById('bigDashboardChart').getContext("2d");
 
-            var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+            let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
             gradientStroke.addColorStop(0, '#80b6f4');
             gradientStroke.addColorStop(1, chartColor);
 
-            var gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
+            let gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
             gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
             gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
 
@@ -231,7 +230,7 @@ demo = {
                 wanitaAktif[i] = jumlahAktif[i] - priaAktif[i];
             }
 
-            var myChart = new Chart(ctx, {
+            let myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: tahun,
@@ -341,7 +340,7 @@ demo = {
                 }
             });
 
-            var cardStatsMiniLineColor = "#fff",
+            let cardStatsMiniLineColor = "#fff",
                 cardStatsMiniDotColor = "#fff";
         }
 
@@ -381,13 +380,13 @@ demo = {
         }
 
         if ($("#barChartSimpleGradientsNumbers").length) {
-            var e = document.getElementById("barChartSimpleGradientsNumbers").getContext("2d");
+            let e = document.getElementById("barChartSimpleGradientsNumbers").getContext("2d");
 
             gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
             gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
             gradientFill.addColorStop(1, hexToRGB('#2CA8FF', 0.6));
 
-            var a = {
+            let a = {
                 type: "bar",
                 data: {
                     labels: ["2015", "2016", "2017", "2018", "2019", "2020"],
@@ -490,7 +489,7 @@ demo = {
                 options: gradientChartOptionsConfiguration
             });
 
-            var viewsChart = new Chart(e, a);
+            let viewsChart = new Chart(e, a);
         }
 
     }

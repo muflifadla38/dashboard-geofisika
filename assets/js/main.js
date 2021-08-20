@@ -1,3 +1,141 @@
+// Color Chart
+chartColor = "#FFFFFF";
+
+/* Index.html */
+if ($("#bigPublikasiChart").length) {
+    let ctx = document.getElementById('bigPublikasiChart').getContext("2d");
+
+    let gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+    gradientStroke.addColorStop(0, '#80b6f4');
+    gradientStroke.addColorStop(1, chartColor);
+
+    let gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
+    gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
+    gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
+
+
+    let tahun = ['2013', '2014', '2015', '2016', '2017'];
+    let jurnalInternasional = [17, 15, 8, 11, 18];
+    let jurnalNasional = [30, 44, 33, 50, 55];
+    let jumlahPublikasi = [];
+    for (let i = 0; i < jurnalNasional.length; i++) {
+        jumlahPublikasi[i] = jurnalNasional[i] + jurnalInternasional[i];
+    }
+
+    let myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: tahun,
+            datasets: [{
+                label: "Jumlah",
+                borderColor: chartColor,
+                pointBorderColor: chartColor,
+                pointBackgroundColor: "#1e3d60",
+                pointHoverBackgroundColor: "#1e3d60",
+                pointHoverBorderColor: chartColor,
+                pointBorderWidth: 1,
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 2,
+                pointRadius: 5,
+                fill: true,
+                backgroundColor: gradientFill,
+                borderWidth: 2,
+                data: jumlahPublikasi
+            }, {
+                label: "Jurnal Internasional",
+                borderColor: chartColor,
+                pointBorderColor: chartColor,
+                pointBackgroundColor: "#3a76ba ",
+                pointHoverBackgroundColor: "#3a76ba ",
+                pointHoverBorderColor: chartColor,
+                pointBorderWidth: 1,
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 2,
+                pointRadius: 5,
+                fill: true,
+                backgroundColor: gradientFill,
+                borderWidth: 2,
+                data: jurnalInternasional
+            }, {
+                label: "Jurnal Nasional",
+                borderColor: chartColor,
+                pointBorderColor: chartColor,
+                pointBackgroundColor: "#2c598d",
+                pointHoverBackgroundColor: "#2c598d",
+                pointHoverBorderColor: chartColor,
+                pointBorderWidth: 1,
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 2,
+                pointRadius: 5,
+                fill: true,
+                backgroundColor: gradientFill,
+                borderWidth: 2,
+                data: jurnalNasional
+            }]
+        },
+        options: {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 0,
+                    bottom: 40
+                }
+            },
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: '#fff',
+                titleFontColor: '#333',
+                bodyFontColor: '#666',
+                bodySpacing: 4,
+                xPadding: 12,
+                mode: "nearest",
+                intersect: 0,
+                position: "nearest"
+            },
+            legend: {
+                position: "bottom",
+                fillStyle: "#FFF",
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontColor: "rgba(255,255,255,0.4)",
+                        fontStyle: "bold",
+                        beginAtZero: true,
+                        maxTicksLimit: 5,
+                        padding: 10
+                    },
+                    gridLines: {
+                        drawTicks: true,
+                        drawBorder: false,
+                        display: true,
+                        color: "rgba(255,255,255,0.1)",
+                        zeroLineColor: "transparent"
+                    }
+
+                }],
+                xAxes: [{
+                    gridLines: {
+                        zeroLineColor: "transparent",
+                        display: false,
+
+                    },
+                    ticks: {
+                        padding: 10,
+                        fontColor: "rgba(255,255,255,0.4)",
+                        fontStyle: "bold"
+                    }
+                }]
+            }
+        }
+    });
+
+    let cardStatsMiniLineColor = "#fff",
+        cardStatsMiniDotColor = "#fff";
+}
+
 // Doughat Chart.Js
 if ($('#usersDoughnutChart').length) {
     let usersDoughnutChart = $('#usersDoughnutChart')[0].getContext('2d');
